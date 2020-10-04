@@ -15,12 +15,12 @@ for response in responses.json():
 		commits = commits + 1
 
 if commits == 0:
-	output = "You have not yet committed anything today."
+	output = 'echo "You have not yet committed anything today."'
 elif commits == 1:
-	output = "You have committed once today.  Nice job!"
+	output = 'echo "You have committed once today.  Nice job!"'
 elif commits > 1:
-	output = "You have committed {} times today.  Nice job!"
+	output = 'echo "You have committed {} times today.  Nice job!"'.format(commits)
 
-os.system('echo output')
+os.system(output)
 exit()
 
