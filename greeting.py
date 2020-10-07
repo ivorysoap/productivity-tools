@@ -20,12 +20,12 @@ username = 'ivorysoap'
 
 today = datetime.today().strftime('%Y-%m-%d')
 
-os.system('echo "Welcome, $(whoami)!  [$(date)]"')
+os.system('echo "Welcome, $(tput setaf 6)$(whoami)! $(tput sgr 0)  [$(date)]"')
 
 commits = getCommitsToday(username)
 
 if commits == 0:
-	output = 'echo "You have not yet committed anything today."'
+	output = 'echo "$(tput setaf 1)You have not yet made a GitHub commit today.$(tput sgr 0)"'
 elif commits == 1:
 	output = 'echo "You have committed once today.  Nice job!"'
 elif commits > 1:
