@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 from datetime import datetime
 
@@ -15,8 +16,12 @@ def getCommitsToday(username, today = None):
     return commits
         
 
-# Remove later.
-username = 'ivorysoap'
+try:
+    username = sys.argv[1]
+except IndexError:
+    print("greeting.py: no GitHub username passed as command-line argument.  Exiting.")
+    sys.exit(-1)
+
 
 today = datetime.today().strftime('%Y-%m-%d')
 
