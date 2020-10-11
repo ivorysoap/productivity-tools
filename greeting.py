@@ -19,7 +19,7 @@ def getCommitsToday(username, today = None):
 try:
     username = sys.argv[1]
 except IndexError:
-    print("greeting.py: no GitHub username passed as command-line argument.  Exiting.")
+    print("{}: no GitHub username passed as command-line argument.  Exiting.".format(sys.argv[0]))
     sys.exit(-1)
 
 
