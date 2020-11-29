@@ -6,7 +6,7 @@ This displays a little welcome message whenever you open your Bash terminal, rem
 
 #### Usage
 
-Place `greetings.py` into your home directory (on Linux, usually `/home/username`).  Then, open up your `.bashrc` in your favourite text editor and append the following two lines (don't forget to use your own GitHub handle):
+Place `greetings.py` into your home directory (on Linux, usually `/home/username`).  Then, open up your `.bashrc` in your favourite text editor and add the following two lines (don't forget to use your own GitHub handle):
 
 ```
 export GITHUB_USERNAME="YourGitHubUsernameHere"
