@@ -1,5 +1,3 @@
-# productivity-tools
-
 ## GitHub Commit Reminder
 
 This displays a little welcome message whenever you open your Bash terminal, reminding you to make a GitHub commit if you haven't already made one today.  If you have already committed today, it'll tell you how many commits you've done.
