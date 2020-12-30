@@ -1,14 +1,17 @@
 #!/bin/bash
 
-FILE=./numbers
+FILE=./file
 if test -f "$FILE"; then
-	echo "$FILE exists"
+        echo "$FILE exists"
 else
-	echo "$FILE does not exist"
-	touch file
+        echo "$FILE does not exist"
+        touch file
+fi
 
-echo $((1 + $RANDOM % 1000000)) >> file
+message="$((1 + $RANDOM % 1000000)) | $(date)"  # Random number and current dat>
+echo $message >> file
 git add file
-git commit -m "Scheduled commit"
+git commit -m "Scheduled commit | $(date)"
 git push
 
+exit 1
